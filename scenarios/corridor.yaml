@@ -1,0 +1,45 @@
+# Example of a custom network: a four-signal east-west arterial with side streets.
+id: corridor
+description: Two-lane east-west arterial with four signalized side-street crossings (custom network format).
+network:
+  type: custom
+  speed_limit_mps: 13.9
+  lanes: 1
+  nodes:
+    - {id: W, x: -250, y: 0, signalized: false}
+    - {id: S1, x: 0, y: 0}
+    - {id: S2, x: 300, y: 0}
+    - {id: S3, x: 600, y: 0}
+    - {id: S4, x: 900, y: 0}
+    - {id: E, x: 1150, y: 0, signalized: false}
+    - {id: N1, x: 0, y: 200, signalized: false}
+    - {id: SS1, x: 0, y: -200, signalized: false}
+    - {id: N2, x: 300, y: 200, signalized: false}
+    - {id: SS2, x: 300, y: -200, signalized: false}
+    - {id: N3, x: 600, y: 200, signalized: false}
+    - {id: SS3, x: 600, y: -200, signalized: false}
+    - {id: N4, x: 900, y: 200, signalized: false}
+    - {id: SS4, x: 900, y: -200, signalized: false}
+  edges:
+    - {from: W, to: S1, lanes: 2}
+    - {from: S1, to: S2, lanes: 2}
+    - {from: S2, to: S3, lanes: 2}
+    - {from: S3, to: S4, lanes: 2}
+    - {from: S4, to: E, lanes: 2}
+    - {from: N1, to: S1}
+    - {from: S1, to: SS1}
+    - {from: N2, to: S2}
+    - {from: S2, to: SS2}
+    - {from: N3, to: S3}
+    - {from: S3, to: SS3}
+    - {from: N4, to: S4}
+    - {from: S4, to: SS4}
+route_noise: 0.1
+demand:
+  - {origin: W, destination: E, vehicles_per_hour: 500}
+  - {origin: E, destination: W, vehicles_per_hour: 450}
+  - origins: [N1, N2, N3, N4, SS1, SS2, SS3, SS4]
+    destinations: [N1, N2, N3, N4, SS1, SS2, SS3, SS4, W, E]
+    vehicles_per_hour: 6
+emergencies:
+  - {id: EMS_1, origin: W, destination: E, release_s: 600}

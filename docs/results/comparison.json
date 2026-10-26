@@ -1,0 +1,580 @@
+{
+  "labels": [
+    "fixed-time (baseline)",
+    "fixed-time + priority",
+    "adaptive-queue + priority",
+    "max-pressure + priority"
+  ],
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "aggregate": {
+    "fixed-time (baseline)": {
+      "traffic.mean_travel_time_s": {
+        "mean": 94.303,
+        "std": 1.013,
+        "min": 93.47,
+        "max": 95.943,
+        "n": 5
+      },
+      "traffic.mean_waiting_time_s": {
+        "mean": 31.997,
+        "std": 0.917,
+        "min": 31.3,
+        "max": 33.544,
+        "n": 5
+      },
+      "traffic.mean_time_loss_s": {
+        "mean": 34.477,
+        "std": 1.017,
+        "min": 33.645,
+        "max": 36.232,
+        "n": 5
+      },
+      "traffic.mean_queued_vehicles": {
+        "mean": 9.071,
+        "std": 0.669,
+        "min": 8.606,
+        "max": 10.189,
+        "n": 5
+      },
+      "traffic.throughput_vph": {
+        "mean": 1074.8,
+        "std": 48.757,
+        "min": 1020.0,
+        "max": 1134.0,
+        "n": 5
+      },
+      "traffic.trips_unfinished": {
+        "mean": 15.4,
+        "std": 7.162,
+        "min": 9,
+        "max": 27,
+        "n": 5
+      },
+      "emergency.mean_response_time_s": {
+        "mean": 137.764,
+        "std": 4.581,
+        "min": 134.01,
+        "max": 143.03,
+        "n": 5
+      },
+      "emergency.mean_stopped_time_s": {
+        "mean": 59.617,
+        "std": 5.073,
+        "min": 55.27,
+        "max": 65.94,
+        "n": 5
+      },
+      "system.forced_phase_changes": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0,
+        "max": 0,
+        "n": 5
+      }
+    },
+    "fixed-time + priority": {
+      "traffic.mean_travel_time_s": {
+        "mean": 96.48,
+        "std": 2.14,
+        "min": 94.841,
+        "max": 99.1,
+        "n": 5
+      },
+      "traffic.mean_waiting_time_s": {
+        "mean": 34.177,
+        "std": 1.841,
+        "min": 32.587,
+        "max": 36.251,
+        "n": 5
+      },
+      "traffic.mean_time_loss_s": {
+        "mean": 36.682,
+        "std": 1.992,
+        "min": 35.16,
+        "max": 38.878,
+        "n": 5
+      },
+      "traffic.mean_queued_vehicles": {
+        "mean": 9.671,
+        "std": 0.826,
+        "min": 8.858,
+        "max": 10.911,
+        "n": 5
+      },
+      "traffic.throughput_vph": {
+        "mean": 1075.6,
+        "std": 51.408,
+        "min": 1020.0,
+        "max": 1138.0,
+        "n": 5
+      },
+      "traffic.trips_unfinished": {
+        "mean": 15.0,
+        "std": 6.124,
+        "min": 9,
+        "max": 25,
+        "n": 5
+      },
+      "emergency.mean_response_time_s": {
+        "mean": 79.66,
+        "std": 0.576,
+        "min": 78.76,
+        "max": 80.26,
+        "n": 5
+      },
+      "emergency.mean_stopped_time_s": {
+        "mean": 2.877,
+        "std": 0.272,
+        "min": 2.44,
+        "max": 3.19,
+        "n": 5
+      },
+      "system.forced_phase_changes": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0,
+        "max": 0,
+        "n": 5
+      }
+    },
+    "adaptive-queue + priority": {
+      "traffic.mean_travel_time_s": {
+        "mean": 80.865,
+        "std": 1.036,
+        "min": 79.597,
+        "max": 82.351,
+        "n": 5
+      },
+      "traffic.mean_waiting_time_s": {
+        "mean": 18.909,
+        "std": 0.604,
+        "min": 18.183,
+        "max": 19.755,
+        "n": 5
+      },
+      "traffic.mean_time_loss_s": {
+        "mean": 21.055,
+        "std": 0.783,
+        "min": 20.047,
+        "max": 22.007,
+        "n": 5
+      },
+      "traffic.mean_queued_vehicles": {
+        "mean": 4.876,
+        "std": 0.349,
+        "min": 4.411,
+        "max": 5.267,
+        "n": 5
+      },
+      "traffic.throughput_vph": {
+        "mean": 1080.4,
+        "std": 51.291,
+        "min": 1024.0,
+        "max": 1146.0,
+        "n": 5
+      },
+      "traffic.trips_unfinished": {
+        "mean": 12.6,
+        "std": 5.683,
+        "min": 6,
+        "max": 21,
+        "n": 5
+      },
+      "emergency.mean_response_time_s": {
+        "mean": 80.66,
+        "std": 2.736,
+        "min": 79.01,
+        "max": 85.51,
+        "n": 5
+      },
+      "emergency.mean_stopped_time_s": {
+        "mean": 4.036,
+        "std": 2.61,
+        "min": 2.67,
+        "max": 8.69,
+        "n": 5
+      },
+      "system.forced_phase_changes": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0,
+        "max": 0,
+        "n": 5
+      }
+    },
+    "max-pressure + priority": {
+      "traffic.mean_travel_time_s": {
+        "mean": 81.145,
+        "std": 1.024,
+        "min": 79.987,
+        "max": 82.387,
+        "n": 5
+      },
+      "traffic.mean_waiting_time_s": {
+        "mean": 19.188,
+        "std": 0.61,
+        "min": 18.486,
+        "max": 19.807,
+        "n": 5
+      },
+      "traffic.mean_time_loss_s": {
+        "mean": 21.337,
+        "std": 0.822,
+        "min": 20.442,
+        "max": 22.043,
+        "n": 5
+      },
+      "traffic.mean_queued_vehicles": {
+        "mean": 4.963,
+        "std": 0.383,
+        "min": 4.528,
+        "max": 5.364,
+        "n": 5
+      },
+      "traffic.throughput_vph": {
+        "mean": 1081.2,
+        "std": 50.212,
+        "min": 1028.0,
+        "max": 1146.0,
+        "n": 5
+      },
+      "traffic.trips_unfinished": {
+        "mean": 12.2,
+        "std": 5.63,
+        "min": 6,
+        "max": 21,
+        "n": 5
+      },
+      "emergency.mean_response_time_s": {
+        "mean": 80.71,
+        "std": 2.724,
+        "min": 79.01,
+        "max": 85.51,
+        "n": 5
+      },
+      "emergency.mean_stopped_time_s": {
+        "mean": 4.036,
+        "std": 2.61,
+        "min": 2.67,
+        "max": 8.69,
+        "n": 5
+      },
+      "system.forced_phase_changes": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0,
+        "max": 0,
+        "n": 5
+      }
+    }
+  },
+  "warnings": [],
+  "runs": [
+    {
+      "label": "fixed-time (baseline)",
+      "seed": 1,
+      "status": "completed",
+      "run_id": "sample_grid_fixed_time_seed1_20261026-132132-367",
+      "traffic.mean_travel_time_s": 94.612,
+      "traffic.mean_waiting_time_s": 31.712,
+      "traffic.mean_time_loss_s": 34.317,
+      "traffic.mean_queued_vehicles": 8.725,
+      "traffic.throughput_vph": 1050.0,
+      "traffic.trips_unfinished": 10,
+      "emergency.mean_response_time_s": 142.51,
+      "emergency.mean_stopped_time_s": 65.94,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "fixed-time (baseline)",
+      "seed": 2,
+      "status": "completed",
+      "run_id": "sample_grid_fixed_time_seed2_20261026-132132-575",
+      "traffic.mean_travel_time_s": 93.47,
+      "traffic.mean_waiting_time_s": 31.363,
+      "traffic.mean_time_loss_s": 33.645,
+      "traffic.mean_queued_vehicles": 8.639,
+      "traffic.throughput_vph": 1052.0,
+      "traffic.trips_unfinished": 9,
+      "emergency.mean_response_time_s": 134.51,
+      "emergency.mean_stopped_time_s": 55.985,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "fixed-time (baseline)",
+      "seed": 3,
+      "status": "completed",
+      "run_id": "sample_grid_fixed_time_seed3_20261026-132132-784",
+      "traffic.mean_travel_time_s": 95.943,
+      "traffic.mean_waiting_time_s": 33.544,
+      "traffic.mean_time_loss_s": 36.232,
+      "traffic.mean_queued_vehicles": 10.189,
+      "traffic.throughput_vph": 1134.0,
+      "traffic.trips_unfinished": 27,
+      "emergency.mean_response_time_s": 134.01,
+      "emergency.mean_stopped_time_s": 56.605,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "fixed-time (baseline)",
+      "seed": 4,
+      "status": "completed",
+      "run_id": "sample_grid_fixed_time_seed4_20261026-132132-995",
+      "traffic.mean_travel_time_s": 93.775,
+      "traffic.mean_waiting_time_s": 32.065,
+      "traffic.mean_time_loss_s": 34.246,
+      "traffic.mean_queued_vehicles": 8.606,
+      "traffic.throughput_vph": 1020.0,
+      "traffic.trips_unfinished": 16,
+      "emergency.mean_response_time_s": 134.76,
+      "emergency.mean_stopped_time_s": 55.27,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "fixed-time (baseline)",
+      "seed": 5,
+      "status": "completed",
+      "run_id": "sample_grid_fixed_time_seed5_20261026-132133-208",
+      "traffic.mean_travel_time_s": 93.713,
+      "traffic.mean_waiting_time_s": 31.3,
+      "traffic.mean_time_loss_s": 33.945,
+      "traffic.mean_queued_vehicles": 9.197,
+      "traffic.throughput_vph": 1118.0,
+      "traffic.trips_unfinished": 15,
+      "emergency.mean_response_time_s": 143.03,
+      "emergency.mean_stopped_time_s": 64.285,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "fixed-time + priority",
+      "seed": 1,
+      "status": "completed",
+      "run_id": "sample_grid_fixed_time_seed1_20261026-132133-419",
+      "traffic.mean_travel_time_s": 99.1,
+      "traffic.mean_waiting_time_s": 36.251,
+      "traffic.mean_time_loss_s": 38.878,
+      "traffic.mean_queued_vehicles": 10.0,
+      "traffic.throughput_vph": 1046.0,
+      "traffic.trips_unfinished": 12,
+      "emergency.mean_response_time_s": 80.26,
+      "emergency.mean_stopped_time_s": 2.875,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "fixed-time + priority",
+      "seed": 2,
+      "status": "completed",
+      "run_id": "sample_grid_fixed_time_seed2_20261026-132133-631",
+      "traffic.mean_travel_time_s": 94.985,
+      "traffic.mean_waiting_time_s": 32.826,
+      "traffic.mean_time_loss_s": 35.16,
+      "traffic.mean_queued_vehicles": 9.031,
+      "traffic.throughput_vph": 1052.0,
+      "traffic.trips_unfinished": 9,
+      "emergency.mean_response_time_s": 79.76,
+      "emergency.mean_stopped_time_s": 2.94,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "fixed-time + priority",
+      "seed": 3,
+      "status": "completed",
+      "run_id": "sample_grid_fixed_time_seed3_20261026-132133-843",
+      "traffic.mean_travel_time_s": 98.526,
+      "traffic.mean_waiting_time_s": 36.115,
+      "traffic.mean_time_loss_s": 38.848,
+      "traffic.mean_queued_vehicles": 10.911,
+      "traffic.throughput_vph": 1138.0,
+      "traffic.trips_unfinished": 25,
+      "emergency.mean_response_time_s": 78.76,
+      "emergency.mean_stopped_time_s": 2.44,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "fixed-time + priority",
+      "seed": 4,
+      "status": "completed",
+      "run_id": "sample_grid_fixed_time_seed4_20261026-132134-065",
+      "traffic.mean_travel_time_s": 94.841,
+      "traffic.mean_waiting_time_s": 33.105,
+      "traffic.mean_time_loss_s": 35.284,
+      "traffic.mean_queued_vehicles": 8.858,
+      "traffic.throughput_vph": 1020.0,
+      "traffic.trips_unfinished": 16,
+      "emergency.mean_response_time_s": 80.01,
+      "emergency.mean_stopped_time_s": 3.19,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "fixed-time + priority",
+      "seed": 5,
+      "status": "completed",
+      "run_id": "sample_grid_fixed_time_seed5_20261026-132134-276",
+      "traffic.mean_travel_time_s": 94.948,
+      "traffic.mean_waiting_time_s": 32.587,
+      "traffic.mean_time_loss_s": 35.239,
+      "traffic.mean_queued_vehicles": 9.553,
+      "traffic.throughput_vph": 1122.0,
+      "traffic.trips_unfinished": 13,
+      "emergency.mean_response_time_s": 79.51,
+      "emergency.mean_stopped_time_s": 2.94,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "adaptive-queue + priority",
+      "seed": 1,
+      "status": "completed",
+      "run_id": "sample_grid_adaptive_queue_seed1_20261026-132134-489",
+      "traffic.mean_travel_time_s": 82.351,
+      "traffic.mean_waiting_time_s": 19.755,
+      "traffic.mean_time_loss_s": 22.007,
+      "traffic.mean_queued_vehicles": 4.989,
+      "traffic.throughput_vph": 1052.0,
+      "traffic.trips_unfinished": 9,
+      "emergency.mean_response_time_s": 79.01,
+      "emergency.mean_stopped_time_s": 2.94,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "adaptive-queue + priority",
+      "seed": 2,
+      "status": "completed",
+      "run_id": "sample_grid_adaptive_queue_seed2_20261026-132134-705",
+      "traffic.mean_travel_time_s": 80.239,
+      "traffic.mean_waiting_time_s": 18.495,
+      "traffic.mean_time_loss_s": 20.482,
+      "traffic.mean_queued_vehicles": 4.628,
+      "traffic.throughput_vph": 1058.0,
+      "traffic.trips_unfinished": 6,
+      "emergency.mean_response_time_s": 80.01,
+      "emergency.mean_stopped_time_s": 3.19,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "adaptive-queue + priority",
+      "seed": 3,
+      "status": "completed",
+      "run_id": "sample_grid_adaptive_queue_seed3_20261026-132134-920",
+      "traffic.mean_travel_time_s": 81.018,
+      "traffic.mean_waiting_time_s": 19.051,
+      "traffic.mean_time_loss_s": 21.355,
+      "traffic.mean_queued_vehicles": 5.267,
+      "traffic.throughput_vph": 1146.0,
+      "traffic.trips_unfinished": 21,
+      "emergency.mean_response_time_s": 85.51,
+      "emergency.mean_stopped_time_s": 8.69,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "adaptive-queue + priority",
+      "seed": 4,
+      "status": "completed",
+      "run_id": "sample_grid_adaptive_queue_seed4_20261026-132135-148",
+      "traffic.mean_travel_time_s": 79.597,
+      "traffic.mean_waiting_time_s": 18.183,
+      "traffic.mean_time_loss_s": 20.047,
+      "traffic.mean_queued_vehicles": 4.411,
+      "traffic.throughput_vph": 1024.0,
+      "traffic.trips_unfinished": 14,
+      "emergency.mean_response_time_s": 79.26,
+      "emergency.mean_stopped_time_s": 2.69,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "adaptive-queue + priority",
+      "seed": 5,
+      "status": "completed",
+      "run_id": "sample_grid_adaptive_queue_seed5_20261026-132135-365",
+      "traffic.mean_travel_time_s": 81.119,
+      "traffic.mean_waiting_time_s": 19.06,
+      "traffic.mean_time_loss_s": 21.385,
+      "traffic.mean_queued_vehicles": 5.083,
+      "traffic.throughput_vph": 1122.0,
+      "traffic.trips_unfinished": 13,
+      "emergency.mean_response_time_s": 79.51,
+      "emergency.mean_stopped_time_s": 2.67,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "max-pressure + priority",
+      "seed": 1,
+      "status": "completed",
+      "run_id": "sample_grid_max_pressure_seed1_20261026-132135-582",
+      "traffic.mean_travel_time_s": 82.387,
+      "traffic.mean_waiting_time_s": 19.807,
+      "traffic.mean_time_loss_s": 22.043,
+      "traffic.mean_queued_vehicles": 5.019,
+      "traffic.throughput_vph": 1052.0,
+      "traffic.trips_unfinished": 9,
+      "emergency.mean_response_time_s": 79.01,
+      "emergency.mean_stopped_time_s": 2.94,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "max-pressure + priority",
+      "seed": 2,
+      "status": "completed",
+      "run_id": "sample_grid_max_pressure_seed2_20261026-132135-795",
+      "traffic.mean_travel_time_s": 80.199,
+      "traffic.mean_waiting_time_s": 18.486,
+      "traffic.mean_time_loss_s": 20.442,
+      "traffic.mean_queued_vehicles": 4.611,
+      "traffic.throughput_vph": 1058.0,
+      "traffic.trips_unfinished": 6,
+      "emergency.mean_response_time_s": 80.26,
+      "emergency.mean_stopped_time_s": 3.19,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "max-pressure + priority",
+      "seed": 3,
+      "status": "completed",
+      "run_id": "sample_grid_max_pressure_seed3_20261026-132136-021",
+      "traffic.mean_travel_time_s": 81.428,
+      "traffic.mean_waiting_time_s": 19.431,
+      "traffic.mean_time_loss_s": 21.765,
+      "traffic.mean_queued_vehicles": 5.364,
+      "traffic.throughput_vph": 1146.0,
+      "traffic.trips_unfinished": 21,
+      "emergency.mean_response_time_s": 85.51,
+      "emergency.mean_stopped_time_s": 8.69,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "max-pressure + priority",
+      "seed": 4,
+      "status": "completed",
+      "run_id": "sample_grid_max_pressure_seed4_20261026-132136-237",
+      "traffic.mean_travel_time_s": 79.987,
+      "traffic.mean_waiting_time_s": 18.587,
+      "traffic.mean_time_loss_s": 20.446,
+      "traffic.mean_queued_vehicles": 4.528,
+      "traffic.throughput_vph": 1028.0,
+      "traffic.trips_unfinished": 12,
+      "emergency.mean_response_time_s": 79.26,
+      "emergency.mean_stopped_time_s": 2.69,
+      "system.forced_phase_changes": 0
+    },
+    {
+      "label": "max-pressure + priority",
+      "seed": 5,
+      "status": "completed",
+      "run_id": "sample_grid_max_pressure_seed5_20261026-132136-452",
+      "traffic.mean_travel_time_s": 81.724,
+      "traffic.mean_waiting_time_s": 19.629,
+      "traffic.mean_time_loss_s": 21.99,
+      "traffic.mean_queued_vehicles": 5.292,
+      "traffic.throughput_vph": 1122.0,
+      "traffic.trips_unfinished": 13,
+      "emergency.mean_response_time_s": 79.51,
+      "emergency.mean_stopped_time_s": 2.67,
+      "system.forced_phase_changes": 0
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+scenario: ../scenarios/sample_grid.yaml
+label: fixed-time (baseline)
+random_seed: 42
+simulation:
+  engine: meso
+  step_length_s: 1
+  duration_s: 1800
+  decision_interval_s: 5
+  saturation_flow_vps_per_lane: 0.5
+traffic_control:
+  strategy: fixed_time
+  min_green_s: 8
+  max_green_s: 45
+  yellow_s: 3
+  all_red_s: 1
+  fixed_green_s: 25
+emergency:
+  enabled: true
+  routing_strategy: dynamic_shortest_path
+  priority_enabled: false
+  reroute_threshold_percent: 15
+  max_priority_hold_s: 30
+  fairness_window_s: 300
+  max_priority_share: 0.5
+metrics:
+  sample_interval_s: 5
+outputs:
+  directory: runs
+  save_events: true
+  save_decisions: true
+  export_csv: true
+  html_report: true

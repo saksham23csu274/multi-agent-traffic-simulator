@@ -1,0 +1,47 @@
+# Recommended first milestone: a 3x3 signalized grid with time-varying demand,
+# one road closure, and two emergency requests.
+id: sample_grid
+description: >-
+  3x3 grid, 200 m blocks, single-lane two-way streets. Demand ramps up to a peak
+  between 600 s and 1500 s. The eastbound and westbound links between J_1_1 and
+  J_1_2 close from 600 s to 1200 s, cutting the straight route used by EMS_1.
+network:
+  type: grid
+  rows: 3
+  cols: 3
+  block_length_m: 200
+  speed_limit_mps: 13.9
+  lanes: 1
+route_noise: 0.2
+demand:
+  - origins: boundary
+    destinations: boundary
+    vehicles_per_hour: 5
+    start_s: 0
+    end_s: 600
+  - origins: boundary
+    destinations: boundary
+    vehicles_per_hour: 12
+    start_s: 600
+    end_s: 1500
+  - origins: boundary
+    destinations: boundary
+    vehicles_per_hour: 5
+    start_s: 1500
+incidents:
+  - id: closure_center_east
+    kind: closure
+    edges: ["J_1_1->J_1_2", "J_1_2->J_1_1"]
+    start_s: 600
+    end_s: 1200
+emergencies:
+  - id: EMS_1
+    origin: B_W_1
+    destination: B_E_1
+    release_s: 590
+    vehicle_class: ambulance
+  - id: EMS_2
+    origin: B_S_0
+    destination: B_N_2
+    release_s: 1100
+    vehicle_class: fire

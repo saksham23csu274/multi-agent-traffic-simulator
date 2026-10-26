@@ -1,0 +1,28 @@
+id: grid_multi_emergency
+description: >-
+  4x4 grid at peak demand with five emergency requests released close together,
+  exercising priority fairness at shared intersections, plus a slowdown incident.
+network:
+  type: grid
+  rows: 4
+  cols: 4
+  block_length_m: 180
+  speed_limit_mps: 13.9
+route_noise: 0.25
+demand:
+  - origins: boundary
+    destinations: boundary
+    vehicles_per_hour: 4.5
+incidents:
+  - id: slowdown_north
+    kind: slowdown
+    speed_factor: 0.4
+    edges: ["J_2_1->J_2_2", "J_2_2->J_2_1", "J_2_2->J_2_3", "J_2_3->J_2_2"]
+    start_s: 300
+    end_s: 1200
+emergencies:
+  - {id: EMS_1, origin: B_W_1, destination: B_E_1, release_s: 400}
+  - {id: EMS_2, origin: B_S_1, destination: B_N_1, release_s: 420}
+  - {id: EMS_3, origin: B_E_2, destination: B_W_2, release_s: 440}
+  - {id: EMS_4, origin: B_N_2, destination: B_S_2, release_s: 460}
+  - {id: EMS_5, origin: B_W_2, destination: B_N_3, release_s: 900, vehicle_class: police}

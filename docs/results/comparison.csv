@@ -1,0 +1,21 @@
+label,seed,status,run_id,traffic.mean_travel_time_s,traffic.mean_waiting_time_s,traffic.mean_time_loss_s,traffic.mean_queued_vehicles,traffic.throughput_vph,traffic.trips_unfinished,emergency.mean_response_time_s,emergency.mean_stopped_time_s,system.forced_phase_changes
+fixed-time (baseline),1,completed,sample_grid_fixed_time_seed1_20261026-132132-367,94.612,31.712,34.317,8.725,1050.0,10,142.51,65.94,0
+fixed-time (baseline),2,completed,sample_grid_fixed_time_seed2_20261026-132132-575,93.47,31.363,33.645,8.639,1052.0,9,134.51,55.985,0
+fixed-time (baseline),3,completed,sample_grid_fixed_time_seed3_20261026-132132-784,95.943,33.544,36.232,10.189,1134.0,27,134.01,56.605,0
+fixed-time (baseline),4,completed,sample_grid_fixed_time_seed4_20261026-132132-995,93.775,32.065,34.246,8.606,1020.0,16,134.76,55.27,0
+fixed-time (baseline),5,completed,sample_grid_fixed_time_seed5_20261026-132133-208,93.713,31.3,33.945,9.197,1118.0,15,143.03,64.285,0
+fixed-time + priority,1,completed,sample_grid_fixed_time_seed1_20261026-132133-419,99.1,36.251,38.878,10.0,1046.0,12,80.26,2.875,0
+fixed-time + priority,2,completed,sample_grid_fixed_time_seed2_20261026-132133-631,94.985,32.826,35.16,9.031,1052.0,9,79.76,2.94,0
+fixed-time + priority,3,completed,sample_grid_fixed_time_seed3_20261026-132133-843,98.526,36.115,38.848,10.911,1138.0,25,78.76,2.44,0
+fixed-time + priority,4,completed,sample_grid_fixed_time_seed4_20261026-132134-065,94.841,33.105,35.284,8.858,1020.0,16,80.01,3.19,0
+fixed-time + priority,5,completed,sample_grid_fixed_time_seed5_20261026-132134-276,94.948,32.587,35.239,9.553,1122.0,13,79.51,2.94,0
+adaptive-queue + priority,1,completed,sample_grid_adaptive_queue_seed1_20261026-132134-489,82.351,19.755,22.007,4.989,1052.0,9,79.01,2.94,0
+adaptive-queue + priority,2,completed,sample_grid_adaptive_queue_seed2_20261026-132134-705,80.239,18.495,20.482,4.628,1058.0,6,80.01,3.19,0
+adaptive-queue + priority,3,completed,sample_grid_adaptive_queue_seed3_20261026-132134-920,81.018,19.051,21.355,5.267,1146.0,21,85.51,8.69,0
+adaptive-queue + priority,4,completed,sample_grid_adaptive_queue_seed4_20261026-132135-148,79.597,18.183,20.047,4.411,1024.0,14,79.26,2.69,0
+adaptive-queue + priority,5,completed,sample_grid_adaptive_queue_seed5_20261026-132135-365,81.119,19.06,21.385,5.083,1122.0,13,79.51,2.67,0
+max-pressure + priority,1,completed,sample_grid_max_pressure_seed1_20261026-132135-582,82.387,19.807,22.043,5.019,1052.0,9,79.01,2.94,0
+max-pressure + priority,2,completed,sample_grid_max_pressure_seed2_20261026-132135-795,80.199,18.486,20.442,4.611,1058.0,6,80.26,3.19,0
+max-pressure + priority,3,completed,sample_grid_max_pressure_seed3_20261026-132136-021,81.428,19.431,21.765,5.364,1146.0,21,85.51,8.69,0
+max-pressure + priority,4,completed,sample_grid_max_pressure_seed4_20261026-132136-237,79.987,18.587,20.446,4.528,1028.0,12,79.26,2.69,0
+max-pressure + priority,5,completed,sample_grid_max_pressure_seed5_20261026-132136-452,81.724,19.629,21.99,5.292,1122.0,13,79.51,2.67,0
