@@ -25,6 +25,7 @@ The project is for **students, researchers, and developers** studying intelligen
 - [Roadmap](#roadmap)
 - [Support](#support)
 - [Author](#author)
+- [License](#license)
 
 ## Screenshots
 
@@ -459,3 +460,7 @@ For questions or bug reports, open an issue in this repository. Include the run'
 ## Author
 
 Saksham Mathur
+
+## License
+
+Released under the [MIT License](LICENSE).
